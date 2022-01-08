@@ -8,8 +8,9 @@ RELATIVE_PATH = "flight-delay-prediction/Data"
 def get_features_from_description(
     data_description_path: str,
     output_path: str = None,
+    output_delimiter: str = "\n",
     feature_locator: str = "-",
-    delimiter: str = "**",
+    description_delimiter: str = "**",
 ):
     """
     Takes in a file describing a table and its features and uses the provided delimiters to parse them and write the outputs to seperate
@@ -23,10 +24,13 @@ def get_features_from_description(
         `output_path`: str - desired output directory location to store the feature files. This will be created if it does not exist.
             Default will use the current working directory.
 
+        `output_delimiter`: str = '\n' - allows the default output delimiter to be swapped from the default of '\n' to facilitate insertion as
+            a header row.
+
         `feature_locator`: str = "-" - a character present at the beginning of each feature-containing line that is used to parse them.
             Default values are specific to this project and assumes that all feature lines, and ONLY feature lines, begin with this character.
 
-        `delimiter`: str = "**" - string used to split the table and feature names from the rest of the information on the line. This
+        `description_delimiter`: str = "**" - string used to split the table and feature names from the rest of the information on the line. This
             implementation assumes the same delimiter for both table names and features. The default value is specific to this project.
 
     Output:
@@ -37,15 +41,15 @@ def get_features_from_description(
 
     with open(data_description_path, "r") as description_file:
         # split the first line using the delimiter and collect the first occurring internal element resulting from the split.
-        table_name = description_file.readline().split(delimiter)[1]
+        table_name = description_file.readline().split(description_delimiter)[1]
         # makes a list of features from lines that begin with the feature locator.
         features = [
-            line.split(delimiter)[1]
+            line.split(description_delimiter)[1]
             for line in description_file
             if re.search(fr"^{feature_locator}", line)
         ]
 
-    features_string = "\n".join(features)
+    features_string = output_delimiter.join(features)
 
     with open(f"{output_path}/{table_name}.txt", "w") as feature_file:
         feature_file.write(features_string)
@@ -54,6 +58,7 @@ def get_features_from_description(
 def get_descriptions(
     directory_path: str = f"{RELATIVE_PATH}/descriptions",
     output_path: str = f"{RELATIVE_PATH}/features",
+    output_delimiter: str = "\n",
 ):
     """
     Takes in a directory of description files (expects markdown [.md] files) and iterates through each file to generate feature files.
@@ -65,6 +70,9 @@ def get_descriptions(
 
         `output_path`: str = f"{RELATIVE_PATH}/features" - path for the directory that feature files should be generated in. The default value
             is project-specific.
+
+        `output_delimiter`: str = '\n' - allows the default output delimiter to be swapped from the default of '\n' to facilitate insertion as
+            a header row.
 
     Output:
         A separate text file (.txt) of features for each table in the specified output_path/ directory.
@@ -80,7 +88,7 @@ def get_descriptions(
         description_file = os.fsdecode(file)
         if description_file.endswith(".md"):
             get_features_from_description(
-                f"{directory_path}/{description_file}", output_path
+                f"{directory_path}/{description_file}", output_path, output_delimiter
             )
         else:
             continue
