@@ -13,3 +13,8 @@ Our objective is to predict arrival delays of commercial flights. According to t
 ### Understanding the problem
 ---
 In an effort to understand some common causes of commercial flight delays, a number of sources were consulted including government agencies and flight-focused blog posts. A brief overview of findings can be found in the [Research](./Research) directory. These common causes will inform feature selection and engineering decisions.
+
+### Data description
+---
+Data was sourced from a [LHL](https://github.com/lighthouse-labs/mid-term-project-I/blob/master/README.md) database and [descriptions](./Data/descriptions) were provided for each table. We used a custom [script](./Scripts/feature_extraction.py) to extract the feature names from these description files.
+
