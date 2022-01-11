@@ -35,4 +35,4 @@ Data was sourced from a [LHL](https://github.com/lighthouse-labs/mid-term-projec
 |Do bigger delays lead to bigger fuel consumption per passenger?|🔳|
 
 
-Exploration task results can be found [here](Exploration/preliminary_analysis.ipynb)  
+Exploration task results can be found [here](Exploration/recommended_exploration.ipynb)  
