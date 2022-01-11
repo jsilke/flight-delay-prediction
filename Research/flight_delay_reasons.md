@@ -22,6 +22,11 @@
 - Fixing mechanical issues/maintenance
 - Safety
 
+### Taxi Times
+- [Definition of Taxi In and Taxi Out times](https://aviation.stackexchange.com/questions/45190/what-is-the-exact-definition-of-taxi-time) and an examp
+- [Predicting Aircraft Taxi Time](https://towardsdatascience.com/predicting-aircraft-taxi-time-6c4eaa402d77)
+
+
 ### Other notes:
 
 - typically 1 flight attendant per 50 seats
