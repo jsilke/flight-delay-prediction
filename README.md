@@ -16,5 +16,5 @@ In an effort to understand some common causes of commercial flight delays, a num
 
 ### Data description
 ---
-Data was sourced from a [LHL](https://github.com/lighthouse-labs/mid-term-project-I/blob/master/README.md) database and [descriptions](./Data/descriptions) were provided for each table. We used a custom [script](./Scripts/feature_extraction.py) to extract the feature names from these description files.
+Data was sourced from a [LHL](https://github.com/lighthouse-labs/mid-term-project-I/blob/master/README.md) database and [descriptions](./Data/descriptions) were provided for each table. We used a custom [script](./Scripts/feature_extraction.py) to extract the feature names from these description files and the raw data can be found [here](./Data/files). The rationale behind missing value processing can be reviewed and reproduced by reading and executing the [data_overview](./Exploration/data_overview.ipynb) notebook.
 
