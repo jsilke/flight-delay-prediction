@@ -18,3 +18,21 @@ In an effort to understand some common causes of commercial flight delays, a num
 ---
 Data was sourced from a [LHL](https://github.com/lighthouse-labs/mid-term-project-I/blob/master/README.md) database and [descriptions](./Data/descriptions) were provided for each table. We used a custom [script](./Scripts/feature_extraction.py) to extract the feature names from these description files and the raw data can be found [here](./Data/files). The rationale behind missing value processing can be reviewed and reproduced by reading and executing the [data_overview](./Exploration/data_overview.ipynb) notebook.
 
+### [Recommended](https://github.com/lighthouse-labs/mid-term-project-I/blob/master/exploratory_analysis.ipynb) exploration
+---
+
+|Task|Status|
+|----|:----:|
+|Test the hypothesis that the arrival delay is from Normal distribution and that mean of the delay is 0. Be careful about the outliers.|✅|
+|Is average/median monthly delay different during the year? If so, which months have the biggest delays and what could be the reason?|🔳|
+|Does the weather affect the delay?|🔳|
+|How are taxi times changing during the day? Does higher traffic lead to longer taxi times?|🔳|
+|What is the average percentage of delays that exist prior to departure (*i.e.* are arrival delays caused by departure delays)? Are airlines able to lower the delay during the flights?|🔳|
+|How many states cover 50% of US air traffic?|🔳|
+|Test the hypothesis that planes fly faster when there is a departure delay.|🔳|
+|When (which hour) do most 'LONG', 'SHORT', 'MEDIUM' haul flights take off?|🔳|
+|Find the top 10 the bussiest airports. Does the greatest number of flights mean that the majority of passengers went through a given airport? How much traffic do these 10 airports cover?|🔳|
+|Do bigger delays lead to bigger fuel consumption per passenger?|🔳|
+
+
+Exploration task results can be found [here](Exploration/preliminary_analysis.ipynb)  
