@@ -28,7 +28,7 @@ Data was sourced from a [LHL](https://github.com/lighthouse-labs/mid-term-projec
 |Does the weather affect the delay?|🧰|
 |How are taxi times changing during the day? Does higher traffic lead to longer taxi times?|✅|
 |What is the average percentage of delays that exist prior to departure (*i.e.* are arrival delays caused by departure delays)? Are airlines able to lower the delay during the flights?|✅|
-|How many states cover 50% of US air traffic?|🔳|
+|How many states cover 50% of US air traffic?|✅|
 |Test the hypothesis that planes fly faster when there is a departure delay.|🔳|
 |When (which hour) do most 'LONG', 'SHORT', 'MEDIUM' haul flights take off?|🔳|
 |Find the top 10 the bussiest airports. Does the greatest number of flights mean that the majority of passengers went through a given airport? How much traffic do these 10 airports cover?|🔳|
