@@ -26,7 +26,7 @@ Data was sourced from a [LHL](https://github.com/lighthouse-labs/mid-term-projec
 |Test the hypothesis that the arrival delay is from Normal distribution and that mean of the delay is 0. Be careful about the outliers.|✅|
 |Is average/median monthly delay different during the year? If so, which months have the biggest delays and what could be the reason?|✅|
 |Does the weather affect the delay?|🧰|
-|How are taxi times changing during the day? Does higher traffic lead to longer taxi times?|🔳|
+|How are taxi times changing during the day? Does higher traffic lead to longer taxi times?|✅|
 |What is the average percentage of delays that exist prior to departure (*i.e.* are arrival delays caused by departure delays)? Are airlines able to lower the delay during the flights?|🔳|
 |How many states cover 50% of US air traffic?|🔳|
 |Test the hypothesis that planes fly faster when there is a departure delay.|🔳|
