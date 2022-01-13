@@ -1,14 +1,15 @@
 import pandas as pd
 
 
-def rank_column_by_mean(df: pd.DataFrame,
-                        to_rank_name: str,
-                        rank_by_name: str,
-                        method: str = 'dense',
-                        ) -> tuple[pd.Series, dict]:
+def _rank_column_by_mean(df: pd.DataFrame,
+                         to_rank_name: str,
+                         rank_by_name: str,
+                         method: str = 'dense',
+                         ) -> tuple[pd.Series, dict]:
     """
     Converts categorical columns into ordinal columns using the pandas `groupby`, `rank` and `transform` categorical methods.
-    Because this is a wrapper function, limitations stem from those of its subcomponents.
+    Because this is a wrapper function, limitations stem from those of its subcomponents. This function is intended for internal
+    use by `rank_features_by_mean`.
 
     Parameters:
 
@@ -46,7 +47,7 @@ def rank_features_by_mean(df: pd.DataFrame,
                           method: str = 'dense',
                           ) -> tuple[pd.DataFrame, dict[dict]]:
     """
-    Applies `rank_column_by_mean` on a list of categorical features (expected subset of `df`.columns) to generate a pandas
+    Applies `_rank_column_by_mean` on a list of categorical features (expected subset of `df`.columns) to generate a pandas
     DataFrame of ranked columns as well as a dict of their mappings.
 
     Parameters:
@@ -73,10 +74,10 @@ def rank_features_by_mean(df: pd.DataFrame,
     mappings = {}
 
     for to_rank_name in to_rank_names:
-        ranked_features[f'{to_rank_name}_ranked'], mappings[to_rank_name] = rank_column_by_mean(df,
-                                                                                                to_rank_name,
-                                                                                                rank_by_name,
-                                                                                                method)
+        ranked_features[f'{to_rank_name}_rank'], mappings[to_rank_name] = _rank_column_by_mean(df,
+                                                                                               to_rank_name,
+                                                                                               rank_by_name,
+                                                                                               method)
 
     return pd.DataFrame(ranked_features), mappings
 
