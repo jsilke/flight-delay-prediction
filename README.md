@@ -40,3 +40,7 @@ Data was sourced from a [LHL](https://github.com/lighthouse-labs/mid-term-projec
 
   
 Exploration task results can be found [here](Exploration/recommended_exploration.ipynb)  
+
+### Feature Selection & Engineering
+---
+The rationale behind the features we used was developed during [exploration](./Exploration) and is explained in further detail in [features](./Data/features). Ideally, we would explore more broadly to determine the feature space that generalizes our predictions the most effectively.
