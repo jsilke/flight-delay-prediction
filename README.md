@@ -44,3 +44,17 @@ Exploration task results can be found [here](Exploration/recommended_exploration
 ### Feature Selection & Engineering
 ---
 The rationale behind the features we used was developed during [exploration](./Exploration) and is explained in further detail in [features](./Data/features). Ideally, we would explore more broadly to determine the feature space that generalizes our predictions the most effectively.
+
+### Modelling
+---
+We use an ensemble approach to modelling that incorporates bagging, boosting, and stacking based on a classifier prediction in an attempt to mitigate our regression error and improve the generalization of our predictions. Our approach can be found [here](./Modelling)
+
+### Wishlist
+---
+If we get more time it would be interesting to pursue:  
+
+- Features from the other tables
+- Time series analysis
+- Further exploration of the data
+- More rigourous modelling (cv, hyperparameter tuning, alternative models, etc.)
+- Alternate pipelines (incorporating polynomial features, different dimensionality reduction approaches, etc.)
